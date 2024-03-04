@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-16">
+        <link href="../styles/mainStyles.css" rel="stylesheet" type="text/css" />
+        <script src="functions.js"></script>                 
+        <script src="write_p1_checkboxes.js"></script>
+        <title>何倫碼測驗 – Meetype</title>
+    </head>
+    <body>
+        <div id="content">
+            <div id="description">
+                <h1>何倫碼測驗</h1>
+                <p>Holland Codes何倫碼是一種職業興趣測驗，由美國心理學家John Holland提出，最多心理師用來評估的職業興趣和適應性的工具。這種理論的觀點來自人格心理學，認為人的性格和興趣會和特定類型的職業匹配，職業選擇行為是人格特質的延伸。</p>
+            </div>
+            <div id="popupBackground">
+                <div id="popupContent">
+                    <p>您至少需選擇6個職業！</p>
+                    <button id="closePopupBtn" class="function_button" onclick="closePopup()">我知道了</button>
+                </div>
+            </div>
+            <form method="get" id="mainForm" onsubmit="return selectLimit();">
+                <h3>請選擇你有興趣的、喜歡的職業。至少需選擇六個。</h3>
+                <div id="checkboxContainer"></div>
+                <input id="next_page_button" class="function_button" type="submit" value="下一頁" />
+            </form>
+        </div>
+    </body>
+</html>
