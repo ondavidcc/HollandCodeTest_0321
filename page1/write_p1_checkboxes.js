@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-fetch('../data/occupations.json')
+fetch('HollandCodeTest/data/occupations.json')
   .then(response => response.json())
   .then(data => {
     let RJobs = data.filter((j)=>j.CODE.charAt(0) == "R");
