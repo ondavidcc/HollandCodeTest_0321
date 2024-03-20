@@ -7,27 +7,44 @@
         <script type="module" src="writeInterestCode.js"></script>
         <script type="module" src="makeRadarChart.js"></script>
         <script type="module" src="writeFittingJobs.js"></script>
+        <script>
+            if(!window.location.href.includes('?')) location.href = "../page1/index_p1.html";
+        </script>
         <title>何倫碼測驗結果 – Meetype</title>
     </head>
     <body>
-        <div id="title"><h1>您的職業興趣（何倫碼）測驗結果</h1></div>
+        <div class="title_block" style="display: block;">
+            <h1 style="text-align: center;">您的職業興趣（何倫碼）測驗結果</h1>
+        </div>
         <div id="content">
             <div class="result_block" id="score_block">
                 <div id="radar_chart_container">
                     <canvas id="radarChartCanvas"></canvas>
                 </div>
                 <div  id="theme_code_top3">
-                    <h3>您前三高分的主題及代碼</h3>
+                    <div class="title_block">
+                        <img class="title_icon" src="../images/Top3.svg"/>
+                        <h3>您前三高分的主題及代碼</h3>
+                    </div> 
                 </div>
             </div>
             <div class="result_block" id="top10_jobs">
-                <h3>最符合您興趣的職業Top10</h3>
+                <div class="title_block">
+                    <img class="title_icon" src="../images/Highest.svg"/>
+                    <h3>最符合您興趣的職業Top10</h3>
+                </div>
             </div>
             <div class="result_block" id="theme_code_last">
-                <h3>您最低分的主題及相關職業</h3>
+                <div class="title_block">
+                    <img class="title_icon" src="../images/Lowest.svg" />
+                    <h3>您最低分的主題及相關職業</h3>
+                </div>
             </div>
             <div id="read_more_block" >
-                <h3>延伸閱讀</h3>
+                <div class="title_block">
+                    <img class="title_icon" src="../images/More.svg" />
+                    <h3>延伸閱讀</h3>
+                </div>
                 <h4>相關影片</h4>
                 <div id="related_articles">
                     <ul>

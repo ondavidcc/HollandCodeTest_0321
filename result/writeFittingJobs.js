@@ -34,7 +34,6 @@ import getUserResult from "./getUserResult.js";
 function getFittingJobs(jobs, code, jobCount){
     let fittingJobs = [];
     let targetCode = code;
-    // console.log(userResult.interestCode)
     for (let i = 0; i < jobs.length && fittingJobs.length < jobCount; i++) {
         let job = jobs[i];
     
@@ -49,6 +48,16 @@ function getFittingJobs(jobs, code, jobCount){
             let job = jobs[i];
     
             if (job.CODE.slice(0, 2) === targetCode.slice(0, 2) && !fittingJobs.includes(job)) {
+                fittingJobs.push(job);
+            }
+        }
+    }
+
+    if (fittingJobs.length < jobCount) {
+        for (let i = 0; i < jobs.length && fittingJobs.length < 10; i++) {
+            let job = jobs[i];
+    
+            if (job.CODE.slice(0, 2) === targetCode.charAt(0)+targetCode.charAt(2) && !fittingJobs.includes(job)) {
                 fittingJobs.push(job);
             }
         }

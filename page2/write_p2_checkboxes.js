@@ -32,14 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
           checkbox.name = occupation.ID;
 
           // 為chekcbox 新增改變時的檢查
-          checkbox.onchange = function() {
-            var maxAllowed = 6;
-            const checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
-            
-            if (checkedCheckboxes.length > maxAllowed) {
-              document.getElementById("popupBackground").style.display = "flex";
-              this.checked = false; // 取消當前被選中的 checkbox
-            }
+          //當checkbox被選取時更新selectCounter文字，作為計數器
+          checkbox.onchange = () => {
+            let checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
+            document.getElementById('selectCounter').innerHTML = `您目前選擇的職業張數為：${checkedCheckboxes.length} 張`;
           }
           // 生成label
           const label = document.createElement('label');

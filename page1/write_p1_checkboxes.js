@@ -39,6 +39,12 @@ function writeCheckbox(job){
   checkbox.className ='checkbox';
   checkbox.id = `${job.ID}`;
   checkbox.name = job.ID;
+
+  //當checkbox被選取時更新selectCounter文字，作為計數器
+  checkbox.onchange = () => {
+    let checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
+    document.getElementById('selectCounter').innerHTML = `您目前選擇的職業張數為：${checkedCheckboxes.length} 張`;
+  }
   
   // 生成label
   const label = document.createElement('label');

@@ -3,13 +3,35 @@ body{
     margin: auto;
 }
 
+/* 標題 */
+.title_block{
+    display: flex;
+    background-color: #D0E5E8;
+}
+
+.title_icon{
+    margin: 0 2rem 0 1rem;
+    width: 3rem;
+}
 
 .result_block{
     border-bottom: 2px solid gray;
 }
 
+.code_descr_block{
+    display: flex;
+    margin: 1rem;
+    border: 2px solid gray;
+    background-color: rgb(128, 128, 128, 0.3);
+}
+
+.code_descr_icon{
+    margin: 0 2rem 0 1rem;
+    width: 3rem;
+}
+
 #radar_chart_container {
-    margin: auto;
+    margin: 10px auto;
     width: 400px;
     height: 300px;
     border: 2px solid gray;
